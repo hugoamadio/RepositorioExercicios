@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+        }
+        table,tr,td{
+            border: 3px;
+            border-style: solid;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        .topo{
+            height: 150px;
+        }
+        .main{
+            height: 500px;
+        }
+        .rodape{
+            height: 150px;
+        }
+        #menu{
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr class="topo">
+                <td colspan="2">Topo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="main">
+                <td id="menu">nav</td>
+                <td>conteudo</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="rodape">
+                <td colspan="2">Rodapé</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
