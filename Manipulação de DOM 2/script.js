@@ -43,9 +43,14 @@ for (let i = 0; i < descricaoCard.length; i++) {
 }
 
 const editarCard = () => {
-    alert("teste")
+    alert("Clicou em Editar!")
 }
 
 const apagarCard = () => {
-    alert("teste denovo")
+    let verifica = confirm("Deseja cancelar o Card?")
+    if(verifica){
+        alert("Confirmado!")
+    } else {
+        alert("Cancelou")
+    }
 }
