@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.linha{
+    display: flex;
+}
+
+
+.square{
+    width: 9vw;
+    height: 17vh;
+    background-color: black;
+    margin: 10px;
+}
+
+.linhaD{
+    justify-content: end;
+}
+
+.linhaBetwen{
+    justify-content: space-between;
+}
+
+.direita{
+
+}
+
+.esquerda{
+
+}

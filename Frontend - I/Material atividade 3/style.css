@@ -1,0 +1,21 @@
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+section, article, h1, h3, img{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list{
+    margin-right: 150px;
+}

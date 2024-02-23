@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>CSS Max-width</h2>
+
+    <p>
+        Um elemento de nível de bloco sempre ocupa toda a largura disponível
+        (se estende para a esquerda e para a direita o máximo possível).
+    </p>
+    <p>
+        Definir a largura de um elemento de nível de bloco impedirá que ele se estenda até as bordas de seu contêiner.
+        Em seguida, você pode definir as margens como automáticas, para centralizar horizontalmente o elemento em seu
+        contêiner. O elemento ocupará a largura especificada e o espaço restante será dividido igualmente entre as duas
+        margens.
+    </p>
+
+    <div class="ex1">Este elemento div tem largura: 500px;</div>
+    <br>
+
+    <p>
+        Nota: O problema com o div acima ocorre quando a janela do navegador é menor que a largura do elemento. O
+        navegador adiciona uma barra de rolagem horizontal à página.
+
+        Usar max-width em vez disso, nessa situação, melhorará o manuseio de janelas pequenas pelo navegador. Isso é
+        importante ao tornar um site utilizável em dispositivos pequenos.
+    </p>
+
+    <div class="ex2">Este elemento div tem largura máxima (max-width): 500px;</div>
+
+    <p><strong>Dica:</strong> Arraste a janela do navegador para uma largura menor que 500px, para ver a diferença
+        entre
+        as duas divs!</p>
+
+</body>
+
+</html>

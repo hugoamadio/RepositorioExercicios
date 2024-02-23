@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>position: static;</h2>
+
+        <p>Um elemento com position: static; não está posicionado de forma especial; é sempre posicionado de acordo com
+            o fluxo normal da página:</p>
+
+        <div class="static">
+            Este elemento div tem position: static;
+        </div>
+    </section>
+    <section>
+        <h2>position: relative;</h2>
+
+        <p>Um elemento com position: relative; está posicionado em relação à sua posição normal:</p>
+
+        <div class="relative">
+            Este elemento div tem position: relative;
+        </div>
+    </section>
+    <section>
+        <h2>position: fixed;</h2>
+
+        <p>
+            Um elemento com position: fixed; está posicionado em relação à janela de visualização, o que significa que
+            sempre permanece no mesmo lugar, mesmo que a página seja rolada:
+        </p>
+
+        <div class="fixed">
+            Este elemento div tem position: fixed;
+        </div>
+    </section>
+
+    <section>
+        <h2>position: absolute;</h2>
+
+        <p>
+            Um elemento com position: absolute; é posicionado em relação ao ancestral posicionado mais próximo (em vez
+            de posicionado em relação à janela de visualização, como fixo):
+        </p>
+
+        <div class="relative2">Este elemento div tem position: relative;
+            <div class="absolute">Este elemento div tem position: absolute;</div>
+        </div>
+    </section>
+
+    <section>
+        <p>Tente <b>rolar</b> dentro deste quadro para entender como funciona o position: sticky; </p>
+
+        <div class="sticky">I am sticky!</div>
+
+        <div style="padding-bottom:2000px">
+            <p>Neste exemplo, o elemento fixo fica no topo da página (topo: 0) quando você alcança sua posição de
+                rolagem.
+            </p>
+            <p>Volte para cima para remover a aderência.</p>
+            <p>Algum texto para habilitar a rolagem...</p>
+            <p>
+                Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas
+                ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas
+                ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

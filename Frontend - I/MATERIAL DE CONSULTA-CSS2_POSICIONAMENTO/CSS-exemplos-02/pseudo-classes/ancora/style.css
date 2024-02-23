@@ -1,0 +1,19 @@
+/* link não visitado */
+a:link {
+  text-decoration: none;
+}
+
+/* link visitado */
+a:visited {
+  text-decoration: none;
+}
+
+/* passar o mouse sobre o link */
+a:hover {
+  text-decoration: underline;
+}
+
+/* link selecionado */
+a:active {
+  text-decoration: underline;
+}
