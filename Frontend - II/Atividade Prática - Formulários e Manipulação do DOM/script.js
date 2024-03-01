@@ -5,7 +5,7 @@ document.getElementById('form-primary').addEventListener('submit', function(even
     const cidade = document.getElementById('cityInput').value
     const estado = document.getElementById('estadoInput').value
     const cargo = document.getElementsByName('cargo')
-    const interesse = d
+    const interesse = document.getElementsByName('interesse')
 
     console.log(`Nome completo: ${nomeCompleto}`)
     console.log(`Endereço: ${endereco}`)
@@ -17,4 +17,11 @@ for (let index = 0; index < cargo.length; index++) {
         console.log(`Cargo: ${cargo[index].value}`)
     }
 }
+
+interesse.forEach(function(checkbox) {
+    if (checkbox.checked) {
+        console.log("Interesse: ",checkbox.nextSibling.textContent.trim());
+    }
+});
+
 })
