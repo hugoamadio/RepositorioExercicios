@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin: 20vh;
+}
+
+.textProblem{
+    display: none;
+    color: red;
+    font-size: small;
+    margin: 0;
+
+}
