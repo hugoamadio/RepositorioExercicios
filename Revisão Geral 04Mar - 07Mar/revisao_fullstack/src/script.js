@@ -70,11 +70,3 @@ function deletarProduto(){
         console.log("Produto a deletar não encontrado!")
     }
 }
-
-console.log("----------------------------------------------------------")
-criarProduto()
-lerProduto()
-atualizarProduto()
-console.log("----------------------------------------------------------")
-deletarProduto()
-lerProduto()
