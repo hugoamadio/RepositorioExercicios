@@ -28,20 +28,73 @@ app.post('/criar-produto', (req, res) => {
         listaProdutos.push(novoProduto)
         res
             .status(201)
-            .json({msg: "Produto Cadastrado Com Sucesso!", produto: novoProduto})
+            .json({ msg: "Produto Cadastrado Com Sucesso!", produto: novoProduto })
     } else {
         res
             .status(400)
-            .json({msg: "O nome ou preço do produto é inválido"})
+            .json({ msg: "O nome ou preço do produto é inválido" })
     }
 })
 
 
 app.get('/produtos', (req, res) => {
     if (listaProdutos.length > 0) {
-        res.json({produtos: listaProdutos})
+        res.json({ produtos: listaProdutos })
     } else {
-        res.json({msg: "lista vazia"})
+        res.json({ msg: "lista vazia" })
+    }
+
+})
+
+app.put('/produtos/:nomeProduto', (req, res) => {
+    let data = req.body
+    let nomeProduto = req.params.nomeProduto
+    let newName = data.newName
+    let newPrice = data.newPrice
+
+    try {
+        let indexProduct = listaProdutos.findIndex(product => product.nome == nomeProduto)
+        if (indexProduct != -1) {
+            const novoProduto = {
+                nome: newName,
+                preco: newPrice
+            }
+            listaProdutos[indexProduct] = novoProduto
+            return res
+                .status(200)
+                .json({ msg: "Produto alterado com sucesso", produto: listaProdutos[indexProduct] })
+        } else {
+            return res
+                .status(400)
+                .json({ msg: "Produto não existe" })
+        }
+    } catch (error) {
+        return res
+            .status(500)
+            .json({ msg: "Erro no servidor" })
+    }
+
+})
+
+app.delete('/produtos/:nomeProduto', (req, res) => {
+    let nomeProduto = req.params.nomeProduto
+
+    try{
+        let indexProduct = listaProdutos.findIndex(produto => produto.nome == nomeProduto)
+        if(indexProduct != -1){
+            listaProdutos.splice(indexProduct, 1)
+            return res
+            .status(200)
+            .json({msg: "Produto excluido com sucesso"})
+        } else {
+            return res
+            .status(400)
+            .json({msg: "Produto não encontrado"})
+        }
+    }catch (error){
+        return res
+        .status(500)
+        .json({msg: "Erro no servidor"})
     }
 
 })
