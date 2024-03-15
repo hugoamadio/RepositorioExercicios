@@ -6,7 +6,88 @@ const app = express()
 app.use(cors());
 app.use(express.json())
 
-let listaProdutos = []
+let listaProdutos = [
+    {
+        id: 1,
+        nome: "Banana",
+        preco: 30
+    },
+    {
+        id: 2,
+        nome: "Frango",
+        preco: 25
+    },
+    {
+        id: 3,
+        nome: "Arroz",
+        preco: 10
+    },
+    {
+        id: 4,
+        nome: "Manga",
+        preco: 5
+    },
+    {
+        id: 5,
+        nome: "Leite",
+        preco: 15
+    },
+    {
+        id: 6,
+        nome: "Pão integral",
+        preco: 8
+    },
+    {
+        id: 7,
+        nome: "Queijo cheddar",
+        preco: 20
+    },
+    {
+        id: 8,
+        nome: "Espinafre",
+        preco: 12
+    },
+    {
+        id: 9,
+        nome: "Iogurte natural",
+        preco: 18
+    },
+    {
+        id: 10,
+        nome: "Tomates",
+        preco: 7
+    },
+    {
+        id: 11,
+        nome: "Batatas",
+        preco: 6
+    },
+    {
+        id: 12,
+        nome: "Cenouras",
+        preco: 4
+    },
+    {
+        id: 13,
+        nome: "Atum enlatado",
+        preco: 22
+    },
+    {
+        id: 14,
+        nome: "Azeite de oliva",
+        preco: 30
+    },
+    {
+        id: 15,
+        nome: "Quinoa",
+        preco: 35
+    },
+    {
+        id: 16,
+        nome: "Maçãs",
+        preco: 20
+    }
+]
 
 app.get('/', (req, res) => {
     return res.json('OK')
@@ -97,4 +178,25 @@ app.delete('/produtos/:nomeProduto', (req, res) => {
         .json({msg: "Erro no servidor"})
     }
 
+})
+
+app.get('/produtosPaginados', (req,res)=>{
+    const limit = parseInt(req.query.limit) || 3
+    const page = parseInt(req.query.page) || 1
+    const posicaoOffset = (page -1) * limit
+    const produtosPaginados = listaProdutos.slice(posicaoOffset, posicaoOffset + limit)
+    try{
+        if(listaProdutos.length === 0){
+            return res
+            .status(400).send({msg: "A lista está vazia"})
+        } else {
+            
+            return res
+            .status(200).send({msg: "A lista está com varios itens", limit, offset: page, produtosPaginados})
+        }
+
+    }catch(error){
+        return res
+        .status(500).send({msg:"erro interno"})
+    }
 })
