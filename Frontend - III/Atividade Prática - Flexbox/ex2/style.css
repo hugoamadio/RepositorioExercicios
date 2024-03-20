@@ -1,0 +1,39 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.square{
+    height: 50px;
+    width: 50px;
+    border: solid 1px black;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    border: solid 1px black;
+    border-radius: 50%;
+}
+
+.colorB{
+    background-color: blue;
+}
+
+.colorO{
+    background-color: orange;
+}
+
+.positionTopRight{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
