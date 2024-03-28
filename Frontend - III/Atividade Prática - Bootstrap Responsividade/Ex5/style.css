@@ -1,0 +1,19 @@
+.container-fluid{
+    height: 110%;
+}
+
+.container{
+    height: auto;
+}
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+.cor{
+    color: yellow;
+}
