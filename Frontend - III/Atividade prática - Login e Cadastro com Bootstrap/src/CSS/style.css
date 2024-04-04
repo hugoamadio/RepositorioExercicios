@@ -1,0 +1,25 @@
+header{
+    height: 15vh;
+    background-color: #5667CB;
+    align-items: center;
+}
+
+main{
+    background-color: #F4F6F8;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: #5667CB !important;
+    width: 17vw;
+}
+
+.btn-submit{
+    width: 35vw !important;
+}
+
+h3, p{
+    color: #3E4E69;
+}
