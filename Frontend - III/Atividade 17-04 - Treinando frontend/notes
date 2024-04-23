@@ -1,0 +1,32 @@
+inputSearch.addEventListener('input', function (event) {
+    const inputValue = inputSearch.value
+    api.get(`/v1/people?name=${inputValue}`)
+        .then(function (res) {
+            const peopleListSearch = res.data
+            innerCard.innerHTML = ""
+            peopleListSearch.forEach(people => {
+                innerCard.innerHTML += `
+                    <div class="col mb-5 d-flex justify-content-center">
+                            <div class="card" style="width: 25rem; height: 36rem;">
+                                <img src="${people.avatar}" class="card-img-top" alt="Card Peoples">
+                                <div class="card-body d-flex flex-column">
+                                <h5 class="card-title align-self-center">${people.name}</h5>
+                                <p class="mb-0 mt-3"> <strong>#${people.id} </p></strong>
+                                <p class="mb-0"> Last Name: ${people.last_name}</p>
+                                <p class="mb-0"> Phone: ${people.phone}</p>
+                                <p class="mb-0"> Create: ${people.createdAt}</p>
+                                <p> </p>
+                                </div>
+                            </div>
+                    </div>
+                `
+            });
+            if (inputValue.length < 1) {
+                innerCard.innerHTML = ""
+                impressPeoples()
+            }
+        })
+        .catch(function (error) {
+            console.error(error)
+        })
+})
