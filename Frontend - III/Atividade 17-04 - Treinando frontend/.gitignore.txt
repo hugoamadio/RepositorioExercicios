@@ -1,0 +1,9 @@
+npm init -y
+npm install -D typescript
+npx tsc --init
+
+linha 29: "rootDir": "./src"
+
+linha 58:   "outDir": "./dist"
+
+npm run "build"
