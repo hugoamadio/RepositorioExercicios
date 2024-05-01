@@ -3,3 +3,5 @@ abstract class ContaBanco {
 
   abstract aviso(): void;
 }
+
+export default ContaBanco
