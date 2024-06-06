@@ -1,0 +1,17 @@
+{
+  "name": "store-avaliation-oo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --cls --transpile-only ./src/",
+    "build": "npx tsc && node ./dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
