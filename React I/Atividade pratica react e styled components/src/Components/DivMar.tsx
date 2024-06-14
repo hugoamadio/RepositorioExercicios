@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Image from "../assets/mar.jpg"
+import { Style } from "@mui/icons-material"
 
 const HeaderContent = styled.div`
     background-image: url(${Image});
@@ -17,12 +18,13 @@ const HeaderContent = styled.div`
 `
 
 interface HeaderMarProps{
-    text: string
+    text: string,
+    style?: React.CSSProperties
 }
 
-function DivMar({text}: HeaderMarProps){
+function DivMar({text, style}: HeaderMarProps){
     return(
-        <HeaderContent>{text}</HeaderContent>
+        <HeaderContent style={style}>{text}</HeaderContent>
     )
 }
 

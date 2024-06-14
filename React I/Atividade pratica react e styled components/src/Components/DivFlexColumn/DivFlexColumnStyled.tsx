@@ -5,6 +5,7 @@ const DivFlexColumStyled = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 0;
 `
 
 export default DivFlexColumStyled

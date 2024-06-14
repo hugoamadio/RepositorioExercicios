@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const Element = styled.div`
+    background-color: #F8F9FB;
     width: 350px;
     height: 350px;
     display: flex;
@@ -21,6 +22,7 @@ const ElementInterno = styled.div`
 const Title = styled.h3`
     font-weight: 600;
     color: black;
+    margin-top: 10px;
 `
 
 const SubTitle = styled.p`

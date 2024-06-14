@@ -1,5 +1,4 @@
-import { Title } from "@mui/icons-material"
-import { ElementInterno, SubTitle, Element } from "./ElementIconsStyled"
+import { ElementInterno, SubTitle, Element, Title } from "./ElementIconsStyled"
 
 interface ElementIconProps{
     icon: JSX.Element,
