@@ -10,7 +10,8 @@ import YellowPhone from "../assets/yellow-phone.jpg"
 import ImageComponent from "../Components/ImageComponent/ImageComponent";
 import CodeImage from "../assets/code-image.jpg"
 import image from "../assets/crianca.webp"
-import Footer from "../Components/FooterComponent/Footer";
+import FooterComponent from "../Components/FooterComponents/FooterComponent";
+
 
 
 function Home(){
@@ -53,7 +54,7 @@ function Home(){
                     <ImageComponent imgSrc={image}/>
                 </DivFlexColumn>
                 <DivMar style={{height: '200px'}} text="Contato"/>
-                <Footer subText="teste"></Footer>
+                <FooterComponent></FooterComponent>
                 
         </>
     )

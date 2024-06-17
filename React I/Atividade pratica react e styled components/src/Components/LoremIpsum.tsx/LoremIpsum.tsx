@@ -1,5 +1,6 @@
 import React from "react"
 import SectionStyled from "./SectionElementStyled"
+import ContentContainer from "./ContentContainer";
 
 interface LoremIpsumProps{
     children: React.ReactNode;
@@ -8,7 +9,9 @@ interface LoremIpsumProps{
 function LoremIpsum({children}: LoremIpsumProps){
     return (
         <SectionStyled>
-            {children}
+            <ContentContainer>
+                {children}
+            </ContentContainer>
         </SectionStyled>
     )
 }

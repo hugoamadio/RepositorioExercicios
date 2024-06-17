@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom"
+import LinkStyled from "./LinkStyled";
 
-function NavegationMenu(){
-    return(
-        <>
-            <Link to={"/about"}>About</Link> '•' <Link to={"/contact"}>Contact</Link> '•' <Link to={"/termsofuse"}>Terms of Use</Link> '•' 
-            <Link to={"/privacy"}> Privacy Policy </Link>
-        </>
-    )
+function NavegationMenu() {
+  return (
+    <div>
+      <LinkStyled to={"/about"}>About</LinkStyled> | <LinkStyled to={"/contact"}>Contact</LinkStyled> |{" "}
+      <LinkStyled to={"/termsofuse"}>Terms of Use</LinkStyled> |
+      <LinkStyled to={"/privacy"}> Privacy Policy </LinkStyled>
+    </div>
+  );
 }
 
-export default NavegationMenu
+export default NavegationMenu;
