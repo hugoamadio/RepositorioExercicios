@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+}
+
+header a:hover{
+    color: black;
+    transition: 0.7s;
+}
