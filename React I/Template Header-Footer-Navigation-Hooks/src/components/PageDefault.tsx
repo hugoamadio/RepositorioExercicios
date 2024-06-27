@@ -16,10 +16,12 @@ function PageDefault({ children }: PageDefaultProps){
     return(
         <>
             <NavBar/>
-            <main style={{display: 'flex', alignItems: 'center', padding: '40px', flexDirection: 'column'}}>
-            {children}
-            </main>
-            <Footer data={dataFooter}/>
+            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                <main style={{ flex: 1, display: 'flex', alignItems: 'center', padding: '40px', flexDirection: 'column' }}>
+                    {children}
+                </main>
+                <Footer data={dataFooter} />
+            </div>
         </>
     )
 }

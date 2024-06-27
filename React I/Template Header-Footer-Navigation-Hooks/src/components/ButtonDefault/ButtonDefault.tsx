@@ -2,7 +2,8 @@ import ButtonStyled from "./ButtonStyled";
 
 interface ButtonDefaultProps{
     label: string,
-    action: () => void;
+    action?: () => void,
+    type?: string
 }
 
 function ButtonDefault({ action, label }: ButtonDefaultProps){

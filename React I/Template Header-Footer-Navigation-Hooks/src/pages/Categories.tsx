@@ -18,7 +18,6 @@ function Categories(){
 
     function changeEvent(ev: React.ChangeEvent<HTMLInputElement>){
         const value = ev.target.value
-
         setName(value)
     }
 
