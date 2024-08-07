@@ -23,6 +23,8 @@ const useProducts = new ProductController()
 
 app.post('/products', useProducts.create)
 app.get('/products', useProducts.list)
+app.get('/products/type/:type', useProducts.selectType)
+app.get('/products/price/:value', useProducts.selectValue)
 
 const useStore = new StoreController()
 
